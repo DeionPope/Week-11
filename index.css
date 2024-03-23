@@ -1,0 +1,58 @@
+.body{
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-size: 80px 80px;
+    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 4px, #e5e5f7 4px, #e5e5f7);
+}
+.cell{
+    width: 4em;
+    height: 4em;
+    border: 10px solid black;
+    line-height: 4em;
+    font-size: 3em;
+    cursor: pointer;
+}
+#gameContainer{
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+   
+    
+}
+#cellContainer{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+.button{
+    background-color: transparent;
+    box-shadow: none;
+    border: 0cap;
+    width: 5em;
+    height: 5em;
+    font-size: 2em;
+    cursor: pointer;v 
+}
+
+/* using nth to take the outside border removed to make it more like a tic tac toe game writing on a notebook page */
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+/* place the index of the cell to N times 3 and plus 1 to get the 3 cells on the left to have no border */
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+/* place the index of the cell to N times 3 and plus 3 to get the 3 cells on the right to have no border */
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+  border-bottom: none;
+}
